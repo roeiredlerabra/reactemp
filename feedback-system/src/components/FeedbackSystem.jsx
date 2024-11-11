@@ -3,10 +3,9 @@ import {
   Brain, 
   Star, 
   Lightbulb, 
-  Handshake, 
-  ClipboardCheck,
+  Users,  // Instead of HandshakeSimple
+  ClipboardList,  // Instead of ClipboardCheck
   User, 
-  Users, 
   Calendar,
   MessageSquare,
   Check,
@@ -63,7 +62,7 @@ const categories = {
     }
   },
   workInterfaces: {
-    icon: Handshake,
+    icon: Users,
     title: 'ממשקי עבודה',
     questions: {
       serviceAssistance: 'מסייע.ת למקבלי שירותיו',
@@ -115,7 +114,7 @@ const Header = ({ formData, onFormChange }) => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6 mb-8">
       <h1 className="text-2xl font-bold text-blue-600 mb-6 flex items-center gap-2">
-        <ClipboardCheck className="w-6 h-6" />
+      <ClipboardList className="w-6 h-6" />
         מערכת משוב הדדי
       </h1>
       
@@ -136,7 +135,7 @@ const Header = ({ formData, onFormChange }) => {
         
         <div>
           <label className="block mb-2 font-medium text-gray-600 flex items-center gap-2">
-            <Users className="w-4 h-4" />
+          <Users className="w-4 h-4" />
             שם המעריך
           </label>
           <input
